@@ -228,6 +228,55 @@ def update_occupancy_grid(log_odds: np.ndarray,
     )
 
     # INSERT CODE HERE
+    x, y, yaw = float(pose[0]), float(pose[1]), float(pose[2])
+    robot_cell = world_to_grid(x, y, resolution, origin)
+    if not in_bounds(robot_cell, log_odds.shape):
+        return log_odds
+
+    # Collect the cells each beam passes through (free) and ends on (occupied)
+    # first, so that every cell is updated at most once per scan no matter how
+    # many beams cross it -- otherwise the cells near the robot would receive
+    # hundreds of "free" updates from a single scan.
+    free_cells: Set[GridCell] = set()
+    occ_cells: Set[GridCell] = set()
+    for i, measured in enumerate(ranges):
+        measured = float(measured)
+        if math.isnan(measured) or measured < float(range_min):
+            continue                                  # invalid reading
+        hit = math.isfinite(measured) and measured < float(range_max)
+        ray_range = measured if hit else float(range_max)
+        if ray_range <= float(range_min):
+            continue
+
+        beam = yaw + float(angle_min) + i * float(angle_increment)
+        end_cell = world_to_grid(x + ray_range * math.cos(beam),
+                                 y + ray_range * math.sin(beam),
+                                 resolution, origin)
+        ray = bresenham(robot_cell, end_cell)
+
+        # every cell before the endpoint was seen through -> free
+        for cell in ray[:-1]:
+            if not in_bounds(cell, log_odds.shape):
+                break
+            free_cells.add(cell)
+        else:
+            last = ray[-1]
+            if in_bounds(last, log_odds.shape):
+                if hit:
+                    occ_cells.add(last)               # the beam stopped here
+                else:
+                    free_cells.add(last)              # max range: no obstacle seen
+
+    # A cell that is the endpoint of some beam is evidence of an obstacle even if
+    # a neighbouring beam grazed through it.
+    free_cells -= occ_cells
+    if free_cells:
+        r, c = zip(*free_cells)
+        log_odds[r, c] += float(l_free)
+    if occ_cells:
+        r, c = zip(*occ_cells)
+        log_odds[r, c] += float(l_occ)
+    np.clip(log_odds, float(min_log_odds), float(max_log_odds), out=log_odds)
     # CODE ENDS HERE
     return log_odds
 
@@ -246,6 +295,64 @@ def astar(occupancy: np.ndarray,
     """
     path: List[GridCell] = []
     # INSERT CODE HERE
+    start = (int(start[0]), int(start[1]))
+    goal = (int(goal[0]), int(goal[1]))
+    shape = occupancy.shape
+    if not (in_bounds(start, shape) and in_bounds(goal, shape)):
+        return path
+    if occupancy[goal] != 0:
+        return path                                  # goal must be known free
+    if start == goal:
+        return [start]
+
+    def passable(cell: GridCell) -> bool:
+        # only known-free cells; the start cell is allowed regardless, since
+        # the robot is physically there even if inflation marked it
+        return cell == start or occupancy[cell] == 0
+
+    def h(cell: GridCell) -> float:
+        # octile distance: admissible and consistent for 8-connected moves
+        dr, dc = abs(cell[0] - goal[0]), abs(cell[1] - goal[1])
+        return (dr + dc) + (math.sqrt(2.0) - 2.0) * min(dr, dc)
+
+    moves = [(-1, 0, 1.0), (1, 0, 1.0), (0, -1, 1.0), (0, 1, 1.0),
+             (-1, -1, math.sqrt(2.0)), (-1, 1, math.sqrt(2.0)),
+             (1, -1, math.sqrt(2.0)), (1, 1, math.sqrt(2.0))]
+
+    g_cost: Dict[GridCell, float] = {start: 0.0}
+    came_from: Dict[GridCell, GridCell] = {}
+    closed: Set[GridCell] = set()
+    counter = 0                                      # FIFO tie-break in the heap
+    open_heap = [(h(start), counter, start)]
+
+    while open_heap:
+        _, _, cur = heapq.heappop(open_heap)
+        if cur in closed:
+            continue                                 # stale heap entry
+        if cur == goal:
+            node = cur
+            path = [node]
+            while node in came_from:
+                node = came_from[node]
+                path.append(node)
+            path.reverse()
+            break
+        closed.add(cur)
+
+        for dr, dc, step in moves:
+            nb = (cur[0] + dr, cur[1] + dc)
+            if not in_bounds(nb, shape) or nb in closed or not passable(nb):
+                continue
+            # no corner cutting: a diagonal move needs both side cells free
+            if dr != 0 and dc != 0:
+                if not (passable((cur[0] + dr, cur[1])) and passable((cur[0], cur[1] + dc))):
+                    continue
+            ng = g_cost[cur] + step
+            if ng < g_cost.get(nb, float("inf")):
+                g_cost[nb] = ng
+                came_from[nb] = cur
+                counter += 1
+                heapq.heappush(open_heap, (ng + h(nb), counter, nb))
     # CODE ENDS HERE
     return path
 
@@ -263,6 +370,42 @@ def frontier_clustering(occupancy: np.ndarray,
     """
     clusters: List[List[GridCell]] = []
     # INSERT CODE HERE
+    occ = np.asarray(occupancy)
+    rows, cols = occ.shape
+
+    # 1) frontier cells: known free with at least one 4-connected unknown neighbour
+    free = occ == 0
+    unknown = occ == -1
+    unknown_nb = np.zeros_like(free)
+    unknown_nb[1:, :] |= unknown[:-1, :]     # neighbour above (row - 1)
+    unknown_nb[:-1, :] |= unknown[1:, :]     # neighbour below (row + 1)
+    unknown_nb[:, 1:] |= unknown[:, :-1]     # neighbour left  (col - 1)
+    unknown_nb[:, :-1] |= unknown[:, 1:]     # neighbour right (col + 1)
+    frontier = free & unknown_nb
+
+    # 2) group frontier cells with an 8-connected BFS; each cell joins one cluster
+    visited = np.zeros_like(frontier)
+    for r0, c0 in zip(*np.nonzero(frontier)):
+        if visited[r0, c0]:
+            continue
+        visited[r0, c0] = True
+        queue = deque([(int(r0), int(c0))])
+        cluster: List[GridCell] = []
+        while queue:
+            r, c = queue.popleft()
+            cluster.append((r, c))
+            for dr in (-1, 0, 1):
+                for dc in (-1, 0, 1):
+                    if dr == 0 and dc == 0:
+                        continue
+                    rr, cc = r + dr, c + dc
+                    if 0 <= rr < rows and 0 <= cc < cols \
+                            and frontier[rr, cc] and not visited[rr, cc]:
+                        visited[rr, cc] = True
+                        queue.append((rr, cc))
+        # 3) discard clusters that are too small to be worth visiting
+        if len(cluster) >= int(min_cluster_size):
+            clusters.append(cluster)
     # CODE ENDS HERE
     return clusters
 
@@ -337,6 +480,16 @@ def largest_frontier(
     selected_frontier: Optional[WorldPoint] = None
 
     # INSERT CODE HERE
+    best_cluster = None
+    best_size = 0
+    for cluster in frontier_clusters:
+        # strict '>' keeps the FIRST cluster on equal-size ties; empty clusters
+        # (size 0) can never be selected
+        if len(cluster) > best_size:
+            best_cluster, best_size = cluster, len(cluster)
+    if best_cluster is not None:
+        r, c = representative_cell(best_cluster)
+        selected_frontier = grid_to_world(r, c, resolution, origin)
     # CODE ENDS HERE
 
     return selected_frontier
@@ -382,8 +535,139 @@ def mcts_frontier(frontier_clusters: Sequence[Sequence[GridCell]],
     credit for the same currently-unknown cells.
     """
     selected_frontier: Optional[WorldPoint] = None
-    
+
     # INSERT CODE HERE
+    if rng is None:
+        rng = np.random.default_rng()
+    for key in MCTS_DEBUG:
+        MCTS_DEBUG[key] = []
+
+    # ---- candidate actions: one representative viewpoint per frontier cluster.
+    # Keep the largest clusters if there are more than max_frontiers.
+    clusters = [c for c in frontier_clusters if len(c) > 0]
+    if not clusters:
+        return selected_frontier
+    clusters.sort(key=len, reverse=True)
+    clusters = clusters[:max(1, int(max_frontiers))]
+    cand_cells: List[GridCell] = [representative_cell(c) for c in clusters]
+    n_actions = len(cand_cells)
+    MCTS_DEBUG["candidate_cells"] = list(cand_cells)
+
+    # Unknown cells each viewpoint would (optimistically) reveal, from the
+    # CURRENT map only -- computed once per decision and reused in the search.
+    radius_cells = max(1, int(round(float(sensor_range) / float(resolution))))
+    visible = [frozenset(_unknown_visible_cells_from(c, occupancy, radius_cells))
+               for c in cand_cells]
+
+    robot_cell = world_to_grid(robot_pose[0], robot_pose[1], resolution, origin)
+
+    def travel_cost(a: GridCell, b: GridCell) -> float:
+        # straight-line distance in metres (cheap proxy for path length)
+        return math.hypot(a[0] - b[0], a[1] - b[1]) * float(resolution)
+
+    def step(position: GridCell, revealed: frozenset, action: int):
+        """One simulated frontier visit: reward and the new revealed set.
+        Only cells NOT already revealed earlier in this sequence count
+        (marginal information gain)."""
+        new_cells = visible[action] - revealed
+        reward = (float(gain_weight) * len(new_cells)
+                  - float(distance_weight) * travel_cost(position, cand_cells[action]))
+        return reward, revealed | new_cells
+
+    def depth_of(node: _MCTSNode) -> int:
+        d = 0
+        while node.parent is not None:
+            d += 1
+            node = node.parent
+        return d
+
+    horizon = max(1, int(rollout_depth))
+    root = _MCTSNode(position=robot_cell,
+                     remaining=tuple(range(n_actions)),
+                     revealed=frozenset())
+    rng.shuffle(root.untried)
+
+    def uct_child(node: _MCTSNode) -> _MCTSNode:
+        # UCT with the exploitation term min-max normalised over the siblings,
+        # so the exploration constant is meaningful whatever the reward scale.
+        means = [ch.value / ch.visits for ch in node.children]
+        lo, hi = min(means), max(means)
+        span = hi - lo if hi > lo else 1.0
+        log_n = math.log(max(node.visits, 1))
+        best, best_score = None, -float("inf")
+        for ch, m in zip(node.children, means):
+            score = ((m - lo) / span
+                     + float(exploration_constant) * math.sqrt(log_n / ch.visits))
+            if score > best_score:
+                best, best_score = ch, score
+        return best
+
+    max_debug_rollouts = 40
+    for _ in range(max(1, int(num_iterations))):
+        # 1) SELECTION: descend through fully-expanded nodes by UCT
+        node = root
+        while not node.untried and node.children:
+            node = uct_child(node)
+
+        # 2) EXPANSION: add one untried action (within the planning horizon)
+        if node.untried and depth_of(node) < horizon:
+            a = node.untried.pop()
+            reward, revealed = step(node.position, node.revealed, a)
+            child = _MCTSNode(position=cand_cells[a],
+                              remaining=tuple(x for x in node.remaining if x != a),
+                              revealed=revealed,
+                              parent=node, action=a, step_reward=reward)
+            rng.shuffle(child.untried)
+            node.children.append(child)
+            node = child
+
+        # 3) ROLLOUT: random continuation of the frontier sequence up to the horizon
+        rollout_return = 0.0
+        position, revealed = node.position, node.revealed
+        remaining = list(node.remaining)
+        rollout_cells: List[GridCell] = []
+        for _d in range(horizon - depth_of(node)):
+            if not remaining:
+                break
+            a = remaining.pop(int(rng.integers(len(remaining))))
+            reward, revealed = step(position, revealed, a)
+            rollout_return += reward
+            position = cand_cells[a]
+            rollout_cells.append(position)
+        if len(MCTS_DEBUG["rollouts"]) < max_debug_rollouts:
+            seq, n = [], node
+            while n.parent is not None:
+                seq.append(n.position)
+                n = n.parent
+            MCTS_DEBUG["rollouts"].append({"cells": seq[::-1] + rollout_cells,
+                                           "return": rollout_return})
+
+        # 4) BACKPROPAGATION: each node stores the return from its own action on
+        G = rollout_return
+        while node is not None:
+            G += node.step_reward
+            node.visits += 1
+            node.value += G
+            node = node.parent
+
+    if not root.children:
+        return selected_frontier
+
+    # executed action: the most-visited root child (mean value breaks ties)
+    best = max(root.children, key=lambda ch: (ch.visits, ch.value / ch.visits))
+    selected_frontier = grid_to_world(best.position[0], best.position[1],
+                                      resolution, origin)
+
+    # diagnostics for RViz
+    MCTS_DEBUG["root_stats"] = [
+        {"cell": ch.position, "visits": ch.visits,
+         "mean_value": ch.value / max(ch.visits, 1)}
+        for ch in root.children]
+    seq, n = [], best
+    while n is not None:
+        seq.append(n.position)
+        n = max(n.children, key=lambda ch: ch.visits) if n.children else None
+    MCTS_DEBUG["best_sequence"] = seq
     # CODE ENDS HERE
-    
+
     return selected_frontier
