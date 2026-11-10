@@ -245,14 +245,33 @@ def update_occupancy_grid(log_odds: np.ndarray,
             continue                                  # invalid reading
         hit = math.isfinite(measured) and measured < float(range_max)
         ray_range = measured if hit else float(range_max)
-        if ray_range <= float(range_min):
+        if ray_range <= float(range_min) + 1e-6:
+            # also catches beams the protection layer cut to range_min:
+            # not a real return, so it carries no information
             continue
 
         beam = yaw + float(angle_min) + i * float(angle_increment)
-        end_cell = world_to_grid(x + ray_range * math.cos(beam),
-                                 y + ray_range * math.sin(beam),
+        c, s = math.cos(beam), math.sin(beam)
+        end_cell = world_to_grid(x + ray_range * c, y + ray_range * s,
                                  resolution, origin)
         ray = bresenham(robot_cell, end_cell)
+
+        if hit:
+            # The protection layer shortens a beam to the distance of an
+            # established wall cell's CENTRE; projected along the beam that
+            # distance can land in a neighbouring (free) cell, e.g. inside a
+            # doorway, and walls would then "grow" along their own line until
+            # they seal the opening. Trace slightly past the endpoint and, if
+            # the beam meets an established wall cell, credit the hit to it.
+            ext = world_to_grid(x + (ray_range + resolution) * c,
+                                y + (ray_range + resolution) * s,
+                                resolution, origin)
+            for k, cell in enumerate(bresenham(robot_cell, ext)[1:], start=1):
+                if not in_bounds(cell, log_odds.shape):
+                    break
+                if float(log_odds[cell]) >= 1.5:
+                    ray = bresenham(robot_cell, cell)
+                    break
 
         # every cell before the endpoint was seen through -> free
         for cell in ray[:-1]:
