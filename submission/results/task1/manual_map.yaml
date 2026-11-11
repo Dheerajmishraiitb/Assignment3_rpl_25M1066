@@ -1,0 +1,12 @@
+resolution: 0.1
+origin:
+- -8.5
+- -4.8
+width: 170
+height: 108
+occupancy_values:
+  unknown: -1
+  free: 0
+  occupied: 100
+csv: manual_map.csv
+png: manual_map.png
