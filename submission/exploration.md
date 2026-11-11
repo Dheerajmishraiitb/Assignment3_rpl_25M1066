@@ -1,5 +1,5 @@
-Name: [your name]
-Roll Number: [your roll number]
+Name: Dheeraj Kumar Mishra
+Roll Number: 25M1066
 
 # CS7001 Assignment 3 — Mapping, Path Planning and Exploration
 
