@@ -1,0 +1,4026 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.6">
+  <model name="turtlebot3_house_clear_exploration">
+    <link name="Wall_101">
+      <pose frame="">-0.04000000 2.48000000 0 0 0 -1.5708</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_101_Visual">
+        <pose frame="">0.00000000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>3.60000000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_101_Collision">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.00000000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>3.60000000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <link name="Wall_104">
+      <pose frame="">1.84000000 2.48000000 0 0 -0 1.5708</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_104_Visual_1">
+        <pose frame="">1.69300000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.21400320 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_104_Visual_2">
+        <pose frame="">1.22600000 0.00000000 2.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.72000000 0.12000000 0.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_104_Visual_0">
+        <pose frame="">-0.46700160 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.66600000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_104_Collision_1">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">1.69300000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.21400320 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_104_Collision_2">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">1.22600000 0.00000000 2.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.72000000 0.12000000 0.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_104_Collision_0">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">-0.46700160 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.66600000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <link name="Wall_106">
+      <pose frame="">4.96000000 -0.14000000 0 0 -0 0</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_106_Visual_1">
+        <pose frame="">0.73778800 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.72442320 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_106_Visual_2">
+        <pose frame="">0.01557680 0.00000000 2.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.72000000 0.12000000 0.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_106_Visual_0">
+        <pose frame="">-0.72221200 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75557680 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_106_Collision_1">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.73778800 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.72442320 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_106_Collision_0">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">-0.72221200 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75557680 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_106_Collision_2">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.01557680 0.00000000 2.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.72000000 0.12000000 0.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <link name="Wall_108">
+      <pose frame="">-1.10009600 -0.13990400 0 0 -0 0</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_108_Visual_0">
+        <pose frame="">-0.68505920 0.00000000 0.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>4.62988000 0.12000000 1</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_108_Visual_1">
+        <pose frame="">2.67494400 0.00000000 0.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.65011760 0.12000000 1</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_108_Collision_1">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">2.67494400 0.00000000 0.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.65011760 0.12000000 1</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_108_Collision_0">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">-0.68505920 0.00000000 0.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>4.62988000 0.12000000 1</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <link name="Wall_81">
+      <pose frame="">4.06201600 4.21504000 0 0 -0 3.14159</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_81_Visual">
+        <pose frame="">0.00000000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>4.00000000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_81_Collision">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.00000000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>4.00000000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <link name="Wall_82">
+      <pose frame="">1.00000000 4.21500800 0 0 -0 3.14159</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_82_Visual">
+        <pose frame="">0.00000000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.20000000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_82_Collision">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.00000000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.20000000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <link name="Wall_83">
+      <pose frame="">-1.98000000 4.22000000 0 0 -0 3.14159</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_83_Visual_2">
+        <pose frame="">0.08819680 0.00000000 1.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.29641600 0.12000000 2</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_83_Visual_6">
+        <pose frame="">1.11820000 0.00000000 2.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.76359200 0.12000000 0.8</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_83_Visual_3">
+        <pose frame="">0.08819680 0.00000000 1.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.29641600 0.12000000 2</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_83_Visual_1">
+        <pose frame="">0.06479440 0.00000000 0.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>3.87040800 0.12000000 0.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_83_Visual_4">
+        <pose frame="">-0.96520800 0.00000000 2.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.81040000 0.12000000 0.8</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_83_Visual_5">
+        <pose frame="">1.11820000 0.00000000 2.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.76359200 0.12000000 0.8</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_83_Visual_0">
+        <pose frame="">-1.93520800 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.12958880 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_83_Collision_4">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">-0.96520800 0.00000000 2.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.81040000 0.12000000 0.8</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_83_Collision_2">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.08819680 0.00000000 1.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.29641600 0.12000000 2</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_83_Collision_6">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">1.11820000 0.00000000 2.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.76359200 0.12000000 0.8</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_83_Collision_0">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">-1.93520800 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.12958880 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_83_Collision_1">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.06479440 0.00000000 0.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>3.87040800 0.12000000 0.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_83_Collision_3">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.08819680 0.00000000 1.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.29641600 0.12000000 2</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_83_Collision_5">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">1.11820000 0.00000000 2.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.76359200 0.12000000 0.8</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <link name="Wall_84">
+      <pose frame="">-4.96000000 4.22000000 0 0 -0 3.14159</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_84_Visual">
+        <pose frame="">0.00000000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.20000000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_84_Collision">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.00000000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.20000000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <link name="Wall_85">
+      <pose frame="">-6.00000000 2.48000000 0 0 0 -1.5708</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_85_Visual_3">
+        <pose frame="">0.49769600 0.00000000 2.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.06560000 0.12000000 0.8</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_85_Visual_2">
+        <pose frame="">1.41524800 0.00000000 1.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.76950400 0.12000000 2</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_85_Visual_0">
+        <pose frame="">-0.91755200 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.76489600 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_85_Visual_1">
+        <pose frame="">0.88244800 0.00000000 0.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.83510400 0.12000000 0.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_85_Collision_3">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.49769600 0.00000000 2.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.06560000 0.12000000 0.8</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_85_Collision_2">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">1.41524800 0.00000000 1.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.76950400 0.12000000 2</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_85_Collision_1">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.88244800 0.00000000 0.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.83510400 0.12000000 0.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_85_Collision_0">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">-0.91755200 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.76489600 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <link name="Wall_86">
+      <pose frame="">-6.00000000 -1.20000000 0 0 0 -1.5708</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_86_Visual_1">
+        <pose frame="">0.22769600 0.00000000 0.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>3.54460800 0.12000000 0.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_86_Visual_4">
+        <pose frame="">-0.97980800 0.00000000 2.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.12960000 0.12000000 0.8</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_86_Visual_0">
+        <pose frame="">-1.77230400 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.45539280 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_86_Visual_5">
+        <pose frame="">0.97796800 0.00000000 2.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.95920000 0.12000000 0.8</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_86_Visual_2">
+        <pose frame="">0.04168000 0.00000000 1.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.91337600 0.12000000 2</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_86_Visual_3">
+        <pose frame="">1.72878400 0.00000000 1.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.54243280 0.12000000 2</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_86_Collision_4">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">-0.97980800 0.00000000 2.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.12960000 0.12000000 0.8</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_86_Collision_5">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.97796800 0.00000000 2.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.95920000 0.12000000 0.8</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_86_Collision_2">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.04168000 0.00000000 1.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.91337600 0.12000000 2</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_86_Collision_1">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.22769600 0.00000000 0.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>3.54460800 0.12000000 0.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_86_Collision_3">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">1.72878400 0.00000000 1.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.54243280 0.12000000 2</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_86_Collision_0">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">-1.77230400 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.45539280 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <link name="Wall_87">
+      <pose frame="">-5.06000000 -3.14000000 0 0 -0 0</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_87_Visual">
+        <pose frame="">0.00000000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.00000000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_87_Collision">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.00000000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.00000000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <link name="Wall_88">
+      <pose frame="">-4.12120800 -1.19700000 0 0 -0 1.5708</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_88_Visual">
+        <pose frame="">0.00000000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>4.00000000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_88_Collision">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.00000000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>4.00000000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <link name="Wall_90">
+      <pose frame="">0.90000000 0.74000000 0 0 -0 0</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_90_Visual">
+        <pose frame="">0.00000000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.00000000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_90_Collision">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.00000000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.00000000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <link name="Wall_91">
+      <pose frame="">1.83995200 0.30004800 0 0 0 -1.57091</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_91_Visual_0">
+        <pose frame="">-0.44120080 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.11759840 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_91_Visual_2">
+        <pose frame="">-0.02240160 0.00000000 2.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.72000000 0.12000000 0.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_91_Visual_1">
+        <pose frame="">0.41879920 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.16240160 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_91_Collision_0">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">-0.44120080 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.11759840 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_91_Collision_1">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.41879920 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.16240160 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_91_Collision_2">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">-0.02240160 0.00000000 2.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.72000000 0.12000000 0.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <link name="Wall_92">
+      <pose frame="">2.87995200 -0.13995200 0 0 0 -4.6e-05</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_92_Visual">
+        <pose frame="">0.00000000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.20000000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_92_Collision">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.00000000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.20000000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <link name="Wall_93">
+      <pose frame="">3.92000000 -2.18000000 0 0 0 -1.5708</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_93_Visual">
+        <pose frame="">0.00000000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>4.20000000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_93_Collision">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.00000000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>4.20000000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <link name="Wall_94">
+      <pose frame="">4.96000000 -4.22000000 0 0 -0 0</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_94_Visual">
+        <pose frame="">0.00000000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.20000000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_94_Collision">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.00000000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.20000000 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <link name="Wall_95">
+      <pose frame="">6.00000000 -2.18000000 0 0 -0 1.5708</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_95_Visual_1">
+        <pose frame="">0.23657200 0.00000000 0.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>3.72685600 0.12000000 0.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_95_Visual_2">
+        <pose frame="">-0.02956720 0.00000000 1.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.02017600 0.12000000 2</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_95_Visual_3">
+        <pose frame="">1.95026400 0.00000000 1.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.29947840 0.12000000 2</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_95_Visual_5">
+        <pose frame="">1.14052000 0.00000000 2.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.32000000 0.12000000 0.8</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_95_Visual_4">
+        <pose frame="">-1.08325600 0.00000000 2.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.08720000 0.12000000 0.8</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_95_Visual_0">
+        <pose frame="">-1.86343200 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.47314480 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_95_Collision_2">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">-0.02956720 0.00000000 1.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.02017600 0.12000000 2</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_95_Collision_3">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">1.95026400 0.00000000 1.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.29947840 0.12000000 2</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_95_Collision_5">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">1.14052000 0.00000000 2.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.32000000 0.12000000 0.8</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_95_Collision_0">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">-1.86343200 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.47314480 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_95_Collision_1">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.23657200 0.00000000 0.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>3.72685600 0.12000000 0.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_95_Collision_4">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">-1.08325600 0.00000000 2.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.08720000 0.12000000 0.8</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <link name="Wall_96">
+      <pose frame="">6.00000000 2.00000000 0 0 -0 1.5708</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_96_Visual_1">
+        <pose frame="">0.60139200 0.00000000 0.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>3.19721600 0.12000000 0.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_96_Visual_2">
+        <pose frame="">1.65539200 0.00000000 1.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.08921600 0.12000000 2</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_96_Visual_3">
+        <pose frame="">0.05678480 0.00000000 2.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.10800000 0.12000000 0.8</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_96_Visual_0">
+        <pose frame="">-1.59860800 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.20278400 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_96_Collision_2">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">1.65539200 0.00000000 1.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.08921600 0.12000000 2</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_96_Collision_0">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">-1.59860800 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.20278400 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_96_Collision_3">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.05678480 0.00000000 2.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.10800000 0.12000000 0.8</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_96_Collision_1">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.60139200 0.00000000 0.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>3.19721600 0.12000000 0.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <link name="Wall_98">
+      <pose frame="">-5.06000000 0.74000000 0 0 -0 0</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_98_Visual_2">
+        <pose frame="">0.01262160 0.00000000 2.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.72000000 0.12000000 0.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_98_Visual_1">
+        <pose frame="">0.68631120 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.62737840 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_98_Visual_0">
+        <pose frame="">-0.67368880 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.65262160 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_98_Collision_0">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">-0.67368880 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.65262160 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_98_Collision_1">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.68631120 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.62737840 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_98_Collision_2">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.01262160 0.00000000 2.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.72000000 0.12000000 0.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <link name="Wall_99">
+      <pose frame="">-4.12000000 2.48000000 0 0 -0 1.5708</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name="Wall_99_Visual_0">
+        <pose frame="">-1.29692800 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.00614400 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_99_Visual_2">
+        <pose frame="">0.17262880 0.00000000 2.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.93296800 0.12000000 0.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <visual name="Wall_99_Visual_1">
+        <pose frame="">1.46956000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.66088640 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+            <uri>model://turtlebot3_house_clear/textures</uri>
+            <name>CS7001/HouseWood</name>
+          </script>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name="Wall_99_Collision_0">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">-1.29692800 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.00614400 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_99_Collision_1">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">1.46956000 0.00000000 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.66088640 0.12000000 2.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <collision name="Wall_99_Collision_2">
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame="">0.17262880 0.00000000 2.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.93296800 0.12000000 0.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <model name="Mailbox">
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>model://turtlebot3_house/mailbox/meshes/mailbox.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>model://turtlebot3_house/mailbox/meshes/mailbox.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://turtlebot3_house_clear/materials/scripts</uri>
+              <uri>model://turtlebot3_house/mailbox/materials/textures</uri>
+              <name>CS7001/HouseMailboxDiffuse</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+      <pose frame="">0.70676960 -0.46098880 0 0 0 -3.14159</pose>
+    </model>
+    <static>1</static>
+    <allow_auto_disable>1</allow_auto_disable>
+  </model>
+</sdf>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="room_label_C">
+    <static>true</static>
+    <link name="link">
+      <!-- 2 mm thin, and there is deliberately NO <collision>: the decal is
+           visual only, so the robot drives straight over it with no contact,
+           no bump and no effect on odometry. It is floor paint, not an object. -->
+      <visual name="decal">
+        <pose>0 0 0.001 0 0 0</pose>
+        <geometry>
+          <box><size>1.0 1.0 0.002</size></box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://room_label_C/materials/scripts</uri>
+            <uri>model://room_label_C/materials/textures</uri>
+            <name>CS7001/RoomLabelC</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

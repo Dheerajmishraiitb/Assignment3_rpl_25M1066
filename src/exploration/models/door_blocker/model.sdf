@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="door_blocker">
+    <static>true</static>
+
+    <!-- Close the lower 0.9 m doorway -->
+    <pose>1.1138916 -0.1627762 0.0 0 0 3.1379404</pose>
+
+    <link name="wall">
+
+      <visual name="visual">
+        <pose>0 0 1.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.9 0.15 2.0</size>
+          </box>
+        </geometry>
+
+        <material>
+          <ambient>0.65 0.65 0.65 1</ambient>
+          <diffuse>0.65 0.65 0.65 1</diffuse>
+        </material>
+      </visual>
+
+      <collision name="collision">
+        <pose>0 0 1.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.9 0.15 2.0</size>
+          </box>
+        </geometry>
+      </collision>
+
+
+      <!-- ========================================================= -->
+      <!-- RPL lab initials on one face of the door blocker wall     -->
+      <!-- If the letters appear on the wrong side, change y=0.076   -->
+      <!-- below to y=-0.076 in all letter segments.                 -->
+      <!-- ========================================================= -->
+
+      <!-- ---------- Letter R (center z = 1.55) ---------- -->
+      <visual name="r_left">
+        <pose>0.10 0.076 1.55 0 0 0</pose>
+        <geometry><box><size>0.04 0.01 0.32</size></box></geometry>
+        <material><ambient>0.0 0.2 0.9 1</ambient><diffuse>0.0 0.2 0.9 1</diffuse></material>
+      </visual>
+
+      <visual name="r_top">
+        <pose>0.00 0.076 1.69 0 0 0</pose>
+        <geometry><box><size>0.20 0.01 0.04</size></box></geometry>
+        <material><ambient>0.0 0.2 0.9 1</ambient><diffuse>0.0 0.2 0.9 1</diffuse></material>
+      </visual>
+
+      <visual name="r_mid">
+        <pose>0.00 0.076 1.55 0 0 0</pose>
+        <geometry><box><size>0.20 0.01 0.04</size></box></geometry>
+        <material><ambient>0.0 0.2 0.9 1</ambient><diffuse>0.0 0.2 0.9 1</diffuse></material>
+      </visual>
+
+      <visual name="r_upper_right">
+        <pose>-0.10 0.076 1.62 0 0 0</pose>
+        <geometry><box><size>0.04 0.01 0.18</size></box></geometry>
+        <material><ambient>0.0 0.2 0.9 1</ambient><diffuse>0.0 0.2 0.9 1</diffuse></material>
+      </visual>
+
+      <visual name="r_leg">
+        <pose>0.00 0.076 1.47 0 -0.78 0</pose>
+        <geometry><box><size>0.19 0.01 0.04</size></box></geometry>
+        <material><ambient>0.0 0.2 0.9 1</ambient><diffuse>0.0 0.2 0.9 1</diffuse></material>
+      </visual>
+
+      <!-- ---------- Letter P (center z = 1.00) ---------- -->
+      <visual name="p_left">
+        <pose>0.10 0.076 1.00 0 0 0</pose>
+        <geometry><box><size>0.04 0.01 0.32</size></box></geometry>
+        <material><ambient>0.0 0.2 0.9 1</ambient><diffuse>0.0 0.2 0.9 1</diffuse></material>
+      </visual>
+
+      <visual name="p_top">
+        <pose>0.00 0.076 1.14 0 0 0</pose>
+        <geometry><box><size>0.20 0.01 0.04</size></box></geometry>
+        <material><ambient>0.0 0.2 0.9 1</ambient><diffuse>0.0 0.2 0.9 1</diffuse></material>
+      </visual>
+
+      <visual name="p_mid">
+        <pose>0.00 0.076 1.00 0 0 0</pose>
+        <geometry><box><size>0.20 0.01 0.04</size></box></geometry>
+        <material><ambient>0.0 0.2 0.9 1</ambient><diffuse>0.0 0.2 0.9 1</diffuse></material>
+      </visual>
+
+      <visual name="p_upper_right">
+        <pose>-0.10 0.076 1.07 0 0 0</pose>
+        <geometry><box><size>0.04 0.01 0.18</size></box></geometry>
+        <material><ambient>0.0 0.2 0.9 1</ambient><diffuse>0.0 0.2 0.9 1</diffuse></material>
+      </visual>
+
+      <!-- ---------- Letter L (center z = 0.45) ---------- -->
+      <visual name="l_left">
+        <pose>0.10 0.076 0.45 0 0 0</pose>
+        <geometry><box><size>0.04 0.01 0.32</size></box></geometry>
+        <material><ambient>0.0 0.2 0.9 1</ambient><diffuse>0.0 0.2 0.9 1</diffuse></material>
+      </visual>
+
+      <visual name="l_bottom">
+        <pose>0.00 0.076 0.31 0 0 0</pose>
+        <geometry><box><size>0.20 0.01 0.04</size></box></geometry>
+        <material><ambient>0.0 0.2 0.9 1</ambient><diffuse>0.0 0.2 0.9 1</diffuse></material>
+      </visual>
+
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,80 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Global Options:
+    Fixed Frame: map
+    Background Color: 0; 0; 0
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Cell Size: 1
+      Plane Cell Count: 24
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+      Show Names: true
+      Marker Scale: 0.6
+    - Class: rviz_default_plugins/RobotModel
+      Name: RobotModel
+      Enabled: true
+      Description Topic:
+        Value: /robot_description
+    - Class: rviz_default_plugins/MarkerArray
+      Name: ArUco landmarks
+      Enabled: true
+      Topic:
+        Value: /viz/landmarks
+        Depth: 5
+        Reliability Policy: Reliable
+    - Class: rviz_default_plugins/Marker
+      Name: EKF covariance
+      Enabled: true
+      Topic:
+        Value: /viz/covariance
+        Depth: 5
+        Reliability Policy: Reliable
+    - Class: rviz_default_plugins/Path
+      Name: EKF estimate
+      Enabled: true
+      Color: 25; 255; 60
+      Line Width: 0.04
+      Topic:
+        Value: /ekf/path
+        Depth: 5
+        Reliability Policy: Reliable
+    - Class: rviz_default_plugins/Path
+      Name: Ground truth
+      Enabled: true
+      Color: 255; 40; 40
+      Line Width: 0.04
+      Topic:
+        Value: /ground_truth/path
+        Depth: 5
+        Reliability Policy: Reliable
+    - Class: rviz_default_plugins/Path
+      Name: Dead reckoning
+      Enabled: true
+      Color: 80; 140; 255
+      Line Width: 0.03
+      Topic:
+        Value: /odom_noisy/path
+        Depth: 5
+        Reliability Policy: Reliable
+    - Class: rviz_default_plugins/Image
+      Name: ArUco detections
+      Enabled: true
+      Topic:
+        Value: /aruco/debug_image/compressed
+        Depth: 5
+        Reliability Policy: Reliable
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 22
+      Focal Point: {X: 0, Y: 1.5, Z: 0}
+      Pitch: 1.31
+      Yaw: 1.57

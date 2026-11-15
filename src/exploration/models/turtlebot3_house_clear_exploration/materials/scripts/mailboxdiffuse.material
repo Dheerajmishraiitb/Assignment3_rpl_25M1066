@@ -1,0 +1,17 @@
+material CS7001/HouseMailboxDiffuse
+{
+  technique
+  {
+    pass
+    {
+      ambient 1 1 1 1
+      diffuse 1 1 1 1
+      specular 0.1 0.1 0.1 1 1
+      texture_unit
+      {
+        texture Mailbox_Diffuse.png
+        filtering trilinear
+      }
+    }
+  }
+}
